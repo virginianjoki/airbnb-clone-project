@@ -179,3 +179,27 @@ Entity Relationships Summary
 -One Property can have many Reviews
 -One User can write many Reviews
 -One Booking has one Payment
+
+Feature Breakdown
+The Airbnb Clone project is designed to replicate the core features of a modern online booking platform. Below are the primary features and how they contribute to the user experience and backend functionality:
+
+User Management
+Users can register, log in, and manage their profiles. Hosts can list properties, while guests can make bookings, leave reviews, and manage their reservations. Secure authentication ensures data protection and role-based access control.
+
+Property Management
+Hosts can list new properties with detailed descriptions, pricing, and location data. Each property is linked to a host and can be edited or removed as needed, providing full CRUD functionality.
+
+Booking System
+Guests can check availability and make bookings for listed properties. The system prevents double-booking and includes status tracking (e.g., pending, confirmed, cancelled) to keep hosts and guests informed.
+
+Payment Integration
+A secure payment module allows users to make payments for their bookings. Each transaction is linked to a booking and user, supporting tracking, status verification, and receipt generation.
+
+Reviews and Ratings
+Guests can leave reviews and rate properties after their stay. These reviews help improve trust in the platform and guide other users in choosing accommodations.
+
+API Security
+The project includes security measures such as JWT authentication, input validation, and role permissions. This ensures that only authorized users can perform actions like creating bookings or editing properties.
+
+CI/CD Integration
+Automated CI/CD pipelines using GitHub Actions help streamline development and deployment. This ensures that new changes are tested and deployed efficiently with minimal downtime or manual intervention.
