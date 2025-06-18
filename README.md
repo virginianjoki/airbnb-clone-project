@@ -203,3 +203,34 @@ The project includes security measures such as JWT authentication, input validat
 
 CI/CD Integration
 Automated CI/CD pipelines using GitHub Actions help streamline development and deployment. This ensures that new changes are tested and deployed efficiently with minimal downtime or manual intervention.
+
+API Security
+Security is a core part of any application that handles sensitive user data, financial transactions, and user-generated content. Below are the key security measures implemented to protect the Airbnb Clone backend:
+
+Authentication
+-Implementation: JWT (JSON Web Tokens) are used to securely identify users after login.
+-Why it matters: Ensures that only registered users can access protected routes and perform actions like booking or reviewing properties.
+
+Authorization
+-Implementation: Role-based access control (RBAC) distinguishes between guests and hosts.
+-Why it matters: Prevents users from performing unauthorized actions, such as a guest editing another host’s property or accessing admin-only features.
+
+Rate Limiting
+-Implementation: Limits the number of requests a user/IP can make within a time window.
+-Why it matters: Protects the API from brute-force attacks, abuse, or denial-of-service (DoS) attempts.
+
+Input Validation & Sanitization
+-Implementation: All user inputs are validated and cleaned before being processed or stored.
+-Why it matters: Prevents common attacks such as SQL injection, XSS (cross-site scripting), and data corruption.
+
+Secure Payment Handling
+-Implementation: Payment processing (if simulated) uses tokenized operations and secure endpoints.
+-Why it matters: Ensures financial data is transmitted and stored safely, reducing the risk of fraud and identity theft.
+
+HTTPS Enforcement
+-Implementation: All requests will be forced over HTTPS in production.
+-Why it matters: Encrypts all communication between client and server, safeguarding sensitive data like passwords and payment details.
+
+Environment Variables
+-Implementation: Secret keys, database credentials, and API tokens are stored in environment variables.
+-Why it matters: Keeps sensitive credentials out of the codebase, reducing the risk of accidental exposure.
