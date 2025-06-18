@@ -22,7 +22,7 @@ CI/CD- GitHub Actions
 Version Control- Git & GitHub
 Documentation- Markdown (README.md, planning docs).
 
-TEAM ROLES
+Team Roles
 
 Backend Developer
 Role: Responsible for building and maintaining the server-side logic.
