@@ -98,3 +98,84 @@ Responsibilities:
 -Ensure all collaborators understand processes and tools.
 -Support onboarding for new team members.
 
+Database Design
+The database for the Airbnb Clone project is designed using a relational model to ensure efficient data management, integrity, and scalability. Below are the key entities, their essential fields, and the relationships between them.
+
+Users
+Fields:
+
+id: Unique identifier
+username: User's chosen name
+email: Contact email address
+password: Hashed password for authentication
+is_host: Boolean to indicate if the user can list properties
+
+Relationships:
+-A user can create multiple Properties
+-A user can make multiple Bookings
+-A user can write multiple Reviews
+-A user can make multiple Payments
+
+Properties
+Fields:
+
+id: Unique identifier
+title: Name of the property
+description: Detailed property info
+location: Physical address
+price_per_night: Cost to book per night
+host_id: Foreign key referencing the User who owns the listing
+
+Relationships:
+-A property belongs to one User (host)
+-A property can have many Bookings
+-A property can have many Reviews
+
+Bookings
+Fields:
+
+id: Unique identifier
+user_id: Foreign key referencing the User making the booking
+property_id: Foreign key referencing the Property being booked
+start_date: Booking start date
+end_date: Booking end date
+status: Status (e.g., pending, confirmed, canceled)
+
+Relationships:
+-A booking belongs to one User
+-A booking belongs to one Property
+
+Reviews
+Fields:
+
+id: Unique identifier
+user_id: Foreign key referencing the User writing the review
+property_id: Foreign key referencing the Property being reviewed
+rating: Numeric rating (e.g., 1–5)
+comment: User's review message
+
+Relationships:
+-A review belongs to one User
+-A review belongs to one Property
+
+Payments
+Fields:
+
+id: Unique identifier
+user_id: Foreign key referencing the User who paid
+booking_id: Foreign key referencing the Booking
+amount: Payment amount
+payment_date: Date and time of payment
+status: Status of the payment (e.g., successful, failed)
+
+Relationships:
+-A payment is made by one User
+-A payment is linked to one Booking
+
+Entity Relationships Summary
+-One User can host many Properties
+-One User can make many Bookings
+-One Booking is for one Property
+-One Property can have many Reviews
+-One User can write many Reviews
+-One Booking has one Payment
