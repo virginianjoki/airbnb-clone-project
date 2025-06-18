@@ -234,3 +234,16 @@ HTTPS Enforcement
 Environment Variables
 -Implementation: Secret keys, database credentials, and API tokens are stored in environment variables.
 -Why it matters: Keeps sensitive credentials out of the codebase, reducing the risk of accidental exposure.
+
+CI/CD Pipeline
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of building, testing, and deploying code changes. This ensures that the application is always in a deployable state, reduces manual errors, and allows for faster feature delivery.
+
+CI/CD importance
+Improved code quality: Automated testing helps catch bugs early before deployment.
+Faster development: Developers can push changes more frequently without worrying about manual deployment steps.
+Consistent deployments: Ensures the same setup is used across development, testing, and production environments.
+
+Tools Used
+GitHub Actions: Automates the pipeline to run tests and deployments on every push or pull request.
+Docker: Containerizes the app for consistent performance across environments.
+Heroku / Render / AWS (optional): Can be used as deployment platforms to host the live application.
